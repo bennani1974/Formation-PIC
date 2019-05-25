@@ -67,11 +67,11 @@ public class Browser {
 				return new FirefoxDriver();
 			} catch (RuntimeException e) {
 				String path;
-				if (System.getProperty("os.name").contains("win")) {
+				//if (System.getProperty("os.name").contains("win")) {
 					path = "bin/FirefoxPortable/App/Firefox/firefox.exe";
-				} else {
+				/*} else {
 					path = "bin/Firefox.app/Contents/MacOS/firefox";
-				}
+				}*/
 				return new FirefoxDriver(new FirefoxBinary(new File(path)), new FirefoxProfile());
 			}
 		} else if (browserName.equals("chrome")) {
